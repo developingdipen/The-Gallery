@@ -1,0 +1,120 @@
+body { margin: 0;} 
+body * {box-sizing: border-box;}
+
+html, body {
+ height:100%;
+ width: 100%;
+ padding:0;
+ margin:0;
+ scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: 'Cormorant', sans-serif;
+}
+
+/* Header Starts*/
+.hero-image {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+        url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   
+    background-attachment: scroll;
+    background-position: center top 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.herotext{
+    text-align: center;
+    margin:  40vh auto;
+    color: white;
+}
+.herotext h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+.herotext h2{
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* Header Ends*/
+
+
+/* Navigation Starts*/
+
+/* Navigation Ends*/
+
+.action-btn{
+    font-size: 1em;
+}
+
+.btn {
+    position: relative;
+    color: white;
+    background-color: transparent;
+    width: 100px;
+    height: 64px;
+    line-height: 64px;
+    transition: all 0.3s;
+    border: none;
+}
+    span {
+      transition: all 0.3s;
+      transform: scale(1, 1);
+    }
+   
+
+.btn::before, .btn::after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+.btn-two::before, .btn-two::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+      height: 100%;
+    bottom: 0;
+      left: 0;
+      z-index: 1;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .btn-two:hover::after {
+    animation-name: rotatecw;
+    animation-duration: 2s;
+  }
+  .btn-two:hover::before {
+    animation-name: rotateccw; 
+    animation-duration: 3s;
+  }
+  .btn-two:hover::after, .btn-two:hover::before {
+    left: 17px;
+    width: 64px;
+    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotatecw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  
+  @keyframes rotateccw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(-360deg);}
+  }
