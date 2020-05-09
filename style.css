@@ -31,16 +31,83 @@ body {
 
 .herotext{
     text-align: center;
-    margin:  40vh auto;
+    margin:  10vh auto;
     color: white;
 }
 .herotext h1{
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: .5em;
+    font-family: 'Playball';
+    font-weight: 400;
 }
 .herotext h2{
     font-size: 1.2em;
     margin-bottom: 1.5em;
+    font-style: oblique;
+}
+
+.action-btn{
+  font-size: 1.2em;
+  font-family: 'Cormorant', sans-serif;
+}
+
+.action-btn:hover{
+  color: rgb(214, 211, 24);
+}
+
+.btn {
+  position: relative;
+  color: white;
+  background-color: transparent;
+  width: 100px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  border: none;
+}
+  span {
+    transition: all 0.3s;
+    transform: scale(1, 1);
+  }
+ 
+
+
+.btn-two::before, .btn-two::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+    height: 100%;
+  bottom: 0;
+    left: 0;
+    z-index: 1;
+  transition: all 0.3s;
+  border: 1.5px solid rgba(255, 255, 255, 1);
+}
+
+.btn-two:hover::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+.btn-two:hover::before {
+  animation-name: rotateccw; 
+  animation-duration: 3s;
+}
+.btn-two:hover::after, .btn-two:hover::before {
+  left: 17px;
+  width: 64px;
+  
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
 }
 
 /* Header Ends*/
@@ -48,73 +115,160 @@ body {
 
 /* Navigation Starts*/
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgba(99, 142, 150, 0.9);
+  overflow-x: hidden;
+  transition: 0.8s;
+  font-family: 'Playball', sans-serif;
+}
+
+.overlay-content {
+  position: relative;
+  top: 35vh;
+  left: 47vw;
+  width: 5%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: rgb(214, 211, 24);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
 /* Navigation Ends*/
 
-.action-btn{
-    font-size: 1em;
+/* About Starts*/
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.btn {
-    position: relative;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  
+  padding: 2% 2%;
+ 
+}
+
+.full-column{
+  flex: 100%;
+  padding: 5vh 15vw;
+}
+
+.about{
+  padding: 10vh 20vw;
+  text-align: center;
+}
+
+.about h1{
+  font-size: 3em;
+  color: rgba(99, 142, 150);
+}
+.about p{
+  font-size: 2em;
+  color: rgba(99, 142, 150);
+  
+}
+
+.vector-img {
+  display: flex;
+  align-content: center;
+}
+
+/* About Ends*/
+
+
+
+
+
+/* Footer Starts*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-align: center;
     color: white;
-    background-color: transparent;
-    width: 100px;
-    height: 64px;
-    line-height: 64px;
-    transition: all 0.3s;
+    background-color:rgba(99, 142, 150, 0.9);
+    padding-top: 1em;
+    padding-bottom: .07em;
+    min-height: 10vh;
+  }
+
+  .footer p {
+      line-height: .5%;
+  }
+
+  .footer p a {
+      text-decoration: none;
+      color: white;
+      font-style: italic;
+  }
+  
+  .footer p a:hover{
+    color: rgb(214, 211, 24);
+  }
+
+  /* Footer Ends*/
+
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 50vh;
+    left: 2vw;
+    z-index: 90;
+    font-size: 18px;
     border: none;
-}
-    span {
-      transition: all 0.3s;
-      transform: scale(1, 1);
-    }
-   
-
-.btn::before, .btn::after {
-    content: '';
-    position: absolute;
-    transition: all 0.3s;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    outline: none;
+    background-color: transparent;
+    color: rgb(214, 211, 24);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    color: rgba(99, 142, 150, 0.9);
   }
 
-.btn-two::before, .btn-two::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-      height: 100%;
-    bottom: 0;
-      left: 0;
-      z-index: 1;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-  }
-  
-  .btn-two:hover::after {
-    animation-name: rotatecw;
-    animation-duration: 2s;
-  }
-  .btn-two:hover::before {
-    animation-name: rotateccw; 
-    animation-duration: 3s;
-  }
-  .btn-two:hover::after, .btn-two:hover::before {
-    left: 17px;
-    width: 64px;
-    
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-  
-  @keyframes rotatecw {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-  }
-  
-  @keyframes rotateccw {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(-360deg);}
-  }
+
