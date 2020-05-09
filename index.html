@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#ffffff"/>
+
     <title>The Gallery</title>
+    <meta name="description" content="A Curated Street, Landscape, and Portrait Photography Exibition."/>
+    <link rel="icon" href="">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playball&display=swap">
@@ -27,15 +32,17 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
               <a href="#about" onclick="closeNav()">About</a>
-              <a href="#" onclick="closeNav()">Street</a>
-              <a href="#" onclick="closeNav()">Landscape</a>
-              <a href="#" onclick="closeNav()">Portrait</a>
+              <a href="index.html#contact" onclick="closeNav()">Contact</a>
+              <a href="street.html" onclick="closeNav()">Street</a>
+              <a href="landscape.html" onclick="closeNav()">Landscape</a>
+              <a href="portrait.html" onclick="closeNav()">Portrait</a>
             </div>
           </div>
         <button onclick="openNav()" id="myBtn" title="Open Overlay"><i class="fa fa-angle-right fa-3x"></i></button>  
     </nav>
 
     <section class="about" id="about">
+
         <div class="row">
             <div class="column full-column">
                 <h1>Hi.</h1>
@@ -43,26 +50,26 @@
         </div>
 
         <div class="row">
-            <div class="column column-left">
-                <p> My name Dipen, and Photography is my Passion. Welcome to my gallery, feel free to take a scroll!</p>
+            <div class="column item1">
+                <p id="centered-p"> My name Dipen, and Photography is my Passion; feel free to take a scroll!</p>
             </div>
-            <div class="column column-right vector-img">
-                <img src="https://www.freevector.com/uploads/vector/preview/29403/Exploring-the-Jungle.jpg" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">    
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column column-left vector-img">
-                <img src="https://www.freevector.com/uploads/vector/preview/29437/Exploring-Nature.jpg" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">   
-            </div>
-            <div class="column column-right">
-                    <p>My favorite genres are: Street, Landscape, and Portrait Photography.</p>
+            <div class="column vector-img">
+                <img src="Exploring the Jungle.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">    
             </div>
         </div>
 
         <div class="row">
-            <div class="column full-column">
-                <p>Contact me if you'd like to collaborate on a project, or just want to geek out over all things Photograhpy!</p>
+            <div class="column vector-img">
+                <img src="Exploring Nature.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">   
+            </div>
+            <div class="column item4">
+                    <p id="centered-p">My favorite genres are: Street, Landscape, and Portrait Photography.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column full-column fourth-row" id="contact">
+                <p>If you'd like to collaborate on a project, or just want to geek out over all things Photograhpy, contact me!</p>
                 <img src="fogg-unsubscribed-1.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">    
             </div>
         </div>
@@ -78,6 +85,8 @@
                 <i class="fa fa-heart-o"></i> 
                 <i class="fa fa-magic"></i>  
                 by <a href="https://developingdipen.com/" target="_blank" rel="noreferrer">Developing Dipen</a></p>
+
+            <p>Vectors Provided by <a href="https://www.freevector.com/">FreeVector</a> & <a href="https://icons8.com/ouch">Ouch!</a></p>
         </footer>
     </section>
 
