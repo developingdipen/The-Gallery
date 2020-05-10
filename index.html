@@ -7,21 +7,23 @@
 
     <title>The Gallery</title>
     <meta name="description" content="A Curated Street, Landscape, and Portrait Photography Exibition."/>
-    <link rel="icon" href="">
+    <link rel="icon" href="The Gallery Favicon.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playball&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
     <section>
         <header>
             <div class="hero-image">
-                <div class="herotext">
-                    <h1>Welcome to The Gallery</h1>
-                    <h2>"Do not touch the Artwork." </h2>
-                    <button class="action-btn btn btn-two" onclick="openNav()">Enter</button>
+                <div class="herotext" >
+                    <h1 class="animated fadeIn slower">Welcome to The Gallery</h1>
+                    <h2 class="animated fadeIn slower delay-1s">"Do not touch the Artwork." </h2>
+                    <button class="action-btn btn-two animated fadeIn slower delay-2s" onclick="openNav()">Enter</button>
                 </div>
             </div>
         </header>
@@ -50,8 +52,8 @@
         </div>
 
         <div class="row">
-            <div class="column item1">
-                <p id="centered-p"> My name Dipen, and Photography is my Passion; feel free to take a scroll!</p>
+            <div class="column vector1">
+                <p id="centered-p"> My name Dipen and Photography is my Passion; feel free to take a scroll through my gallery!</p>
             </div>
             <div class="column vector-img">
                 <img src="Exploring the Jungle.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">    
@@ -70,7 +72,17 @@
         <div class="row">
             <div class="column full-column fourth-row" id="contact">
                 <p>If you'd like to collaborate on a project, or just want to geek out over all things Photograhpy, contact me!</p>
-                <img src="fogg-unsubscribed-1.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;">    
+
+                <div class="social-buttons">
+                    <ul class="social-links">
+                     <li><a href="https://twitter.com/dipenpate7" class="social-icon"> <i class="fa fa-twitter-square"></i></a></li>
+                     <li><a onclick="window.location.href='mailto: dipen.baps@gmail.com';" class="social-icon"> <i class="fa fa-envelope-o"></i></a></li>
+                     <li><a href="https://www.instagram.com/dipen.patel/?hl=en" class="social-icon"> <i class="fa fa-instagram"></i></a></li> 
+                     <li><a href="https://www.flickr.com/photos/131116692@N02/" class="social-icon"> <i class="fa fa-flickr"></i></a></li>         
+                    </ul>
+                  </div>  
+                  
+                <img src="fogg-unsubscribed-1.png" alt="vector image of photographer in the jungle" style="width:100%; height:auto;" data-aos="zoom-in"  data-aos-duration="2500">    
             </div>
         </div>
     </section>
@@ -91,6 +103,10 @@
     </section>
 
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 
 </body>
