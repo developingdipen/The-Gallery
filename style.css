@@ -404,7 +404,7 @@ body {
       rgba(0, 0, 0, 0.3)),
       url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
  
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center top 10%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,9 +451,10 @@ body {
 .genre-column img {
   margin-top: 8px;
   vertical-align: middle;
-  max-width: 100%; 
+  width: 100%; 
      
 }
+/*
 .genre-column .horizontal-img{
   max-width: 100%;
   height: auto;
@@ -463,7 +464,7 @@ body {
   max-height: 100%;
   width: auto;
 }
-
+*/
 @media (max-width: 480px) {
     .header-text{
       font-size: 0.7em;
@@ -475,3 +476,6 @@ body {
 }
 
   /* Genre Pages End */
+
+
+  
