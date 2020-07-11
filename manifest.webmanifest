@@ -1,0 +1,14 @@
+{
+    "name": "The Gallery",
+    "short_name": "The Gallery",
+    "start_url": "https://developingdipen.github.io/The-Gallery/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "description": "A Curated Street, Landscape, and Portrait Photography Exibition.",
+    "icons": [{
+      "src": "The Gallery Favicon.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }]
+  }
